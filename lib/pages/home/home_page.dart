@@ -1,3 +1,4 @@
+import 'package:clone_nubank/pages/home/widgets/menu_app.dart';
 import 'package:clone_nubank/pages/home/widgets/my_app_bar.dart';
 import 'package:clone_nubank/pages/home/widgets/my_dots_app.dart';
 import 'package:clone_nubank/pages/home/widgets/page_view_app.dart';
@@ -41,6 +42,10 @@ class _HomePageState extends State<HomePage> {
                       _showMenu ? _screenHeight * .75 : _screenHeight * .24;
                 });
               },
+            ),
+            MenuApp(
+              top: _screenHeight * .20,
+              showMenu: _showMenu,
             ),
             PageViewApp(
               showMenu: _showMenu,
@@ -90,7 +95,11 @@ class _HomePageState extends State<HomePage> {
                 });
               },
             ),
-            MyDotsApp(top: _screenHeight * .70, currentIndex: _currentIndex)
+            MyDotsApp(
+              top: _screenHeight * .70,
+              currentIndex: _currentIndex,
+              showMenu: _showMenu,
+            )
           ],
         ));
   }

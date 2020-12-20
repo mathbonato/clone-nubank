@@ -14,13 +14,12 @@ class PageViewApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedPositioned(
-      duration: Duration(microseconds: 300),
+      duration: Duration(microseconds: 200),
       curve: Curves.easeOut,
       top: top,
       height: MediaQuery.of(context).size.height * 0.45,
       left: 0,
       right: 0,
-      // width: MediaQuery.of(context).size.width,
       child: GestureDetector(
         onPanUpdate: onPanUpdate,
         child: PageView(
